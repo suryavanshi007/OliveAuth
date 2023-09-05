@@ -19,7 +19,9 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 connectDB();
 
-
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
 app.post('/register', async (req: Request, res: Response) => {
   const { email, username, password } = req.body;
 
